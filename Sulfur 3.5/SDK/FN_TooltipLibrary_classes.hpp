@@ -1,0 +1,42 @@
+#pragma once
+
+// Fortnite (7.00) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// BlueprintGeneratedClass TooltipLibrary.TooltipLibrary_C
+// 0x0000 (0x0028 - 0x0028)
+class UTooltipLibrary_C : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass TooltipLibrary.TooltipLibrary_C");
+		return ptr;
+	}
+
+
+	static void CreateXPTooltip(class APlayerController* Owner, const struct FText& Header, const struct FText& CommanderXP, const struct FText& BoostXP, const struct FText& RestXP, const struct FText& Body, class UObject* __WorldContext, class UCommonUserWidget** Out);
+	static void Create_Basic_Multi_Line_Tooltip(class APlayerController* Owning_Player, const struct FText& Header_Text, class USlateBrushAsset* Icon_Brush, class UObject* __WorldContext, TArray<struct FText>* Body_Text, class UUserWidget** Output);
+	static void Create_Compare_Item_Tooltip(class APlayerController* Owning_Player, const struct FText& Header_Text, class USlateBrushAsset* Header_Icon, class UFortItem* Item, class UFortItem* ComparedItem, class UObject* __WorldContext, class UWidget** Return_Value);
+	static void Create_Item_Tooltip(class APlayerController* Owning_Player, const struct FText& Header_Text, class USlateBrushAsset* Header_Icon, class UFortItem* Item, int OverrideQuantity, class UObject* __WorldContext, class UWidget** Return_Value);
+	static void Set_Enabled_And_Tooltip_Text(class UWidget* Widget, bool Enabled, const struct FText& Tooltip_Text, class UObject* __WorldContext);
+	static void Create_Custom_Tooltip(class APlayerController* Owning_Player, const struct FText& Header_Text, class USlateBrushAsset* Icon_Brush, class UUserWidget* Widget, class UObject* __WorldContext, class UUserWidget** Output);
+	static void Create_Basic_Tooltip(class APlayerController* Owning_Player, const struct FText& Body_Text, const struct FText& Header_Text, class USlateBrushAsset* Icon_Brush, class UObject* __WorldContext, class UUserWidget** Output);
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif
